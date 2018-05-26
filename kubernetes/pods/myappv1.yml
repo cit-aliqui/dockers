@@ -1,0 +1,9 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: myapp
+spec:
+  containers:
+  - name: tomcat
+    image: nexus:9001/student:2.5
+
