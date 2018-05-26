@@ -5,5 +5,5 @@ metadata:
 spec:
   containers:
   - name: tomcat
-    image: nexus:9001/student:2.5
+    image: nexus:7001/student:2.5
 
