@@ -6,5 +6,6 @@ spec:
   containers:
   - name: tomcat
     image: nexus:7001/student:2.5
+    imagePullPolicy: Always
   imagePullSecrets:
    - name: nexusrepo  
