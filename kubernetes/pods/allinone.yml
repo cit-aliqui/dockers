@@ -1,0 +1,38 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: student-deployment
+  labels:
+    app: studentapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: studentapp
+  template:
+    metadata:
+      labels:
+        app: studentapp
+    spec:
+      containers:
+      - name: httpd
+        image: rdevops27/httpd:v2
+        ports:
+        - containerPort: 80
+...
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: mysvc2
+spec:
+  type: LoadBalancer
+  selector:
+    app: studentapp
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+...

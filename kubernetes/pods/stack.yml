@@ -14,7 +14,11 @@ spec:
     spec:
       containers:
       - name: tomcat
-        image: rdevops27/sample:2.5
+        image: rdevops27/tomcat:v1
         ports:
         - containerPort: 8080
+      - name: httpd
+        image: rdevops27/httpd:v1
+        ports:
+        - containerPort: 80
         

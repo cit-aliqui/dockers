@@ -1,0 +1,14 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: twocont 
+spec:
+  containers:
+  - name: cont1 
+    image: centos
+    command: ["sleep"]
+    args: ["1000"] 
+  - name: cont2
+    image: centos
+    command: ["sleep"]
+    args: ["1000"]

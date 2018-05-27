@@ -1,0 +1,8 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: myapp
+spec:
+  containers:
+  - name: tomcat
+    image: rdevops27/sample:2.5 
